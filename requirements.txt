@@ -1,0 +1,42 @@
+# SHL Assessment Recommendation Engine
+
+# Web / API
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+httpx==0.28.1
+
+# Data
+pydantic==2.10.4
+pydantic-settings==2.7.0
+pandas==2.2.3
+numpy==1.26.4
+
+# Scraping
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml==5.3.0
+
+# Google Gemini SDK (v1beta – gemini-embedding-001 + gemini-2.0-flash)
+google-genai>=1.5.0
+
+# Vector search
+faiss-cpu==1.9.0
+
+# Evaluation
+scikit-learn==1.6.1
+
+# Frontend
+streamlit==1.41.1
+
+# Utilities
+python-dotenv==1.0.1
+tenacity==9.0.0
+tqdm==4.67.1
+loguru==0.7.3
+rich==13.9.4
+openpyxl==3.1.5        # pandas .xlsx support
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
