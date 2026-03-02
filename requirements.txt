@@ -6,8 +6,8 @@ uvicorn[standard]==0.32.1
 httpx==0.28.1
 
 # Data
-pydantic==2.10.4
-pydantic-settings==2.7.0
+pydantic>=2.9.0,<2.11
+pydantic-settings>=2.5.0,<2.8
 pandas==2.2.3
 numpy>=2.0.0
 
