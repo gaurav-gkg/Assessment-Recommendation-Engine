@@ -69,9 +69,10 @@ with st.sidebar:
     )
     st.title("⚙️ Settings")
 
+    _default_api_url = os.getenv("API_BASE_URL", f"http://localhost:{settings.API_PORT}")
     api_url = st.text_input(
         "API Base URL",
-        value=f"http://localhost:{settings.API_PORT}",
+        value=_default_api_url,
         help="URL of the running FastAPI backend.",
     )
 
