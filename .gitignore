@@ -16,9 +16,9 @@ dist/
 build/
 .eggs/
 
-# Data (large files – commit only structure)
+# Data
 data/raw/
-data/processed/
+# data/processed/ is committed (FAISS index + embeddings needed for deployment)
 
 # IDE
 .vscode/
