@@ -1,0 +1,8 @@
+# Frontend only – lightweight deps for Streamlit Cloud / Render frontend service
+streamlit==1.41.1
+requests==2.32.3
+pandas==2.2.3
+numpy>=2.0.0
+python-dotenv==1.0.1
+pydantic-settings==2.7.0
+loguru==0.7.3

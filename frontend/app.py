@@ -63,9 +63,10 @@ st.markdown(
 # ---------------------------------------------------------------------------
 
 with st.sidebar:
-    st.image(
-        "https://www.shl.com/wp-content/themes/shl/assets/images/logo.svg",
-        width=120,
+    st.markdown(
+        "<div style='font-size:1.8rem;font-weight:800;color:#e8000d;letter-spacing:2px;margin-bottom:4px'>SHL</div>"
+        "<div style='font-size:0.85rem;font-weight:700;color:#e0e0e0;margin-bottom:16px'>Assessment Recommendation Engine</div>",
+        unsafe_allow_html=True,
     )
     st.title("⚙️ Settings")
 
