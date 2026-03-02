@@ -124,73 +124,6 @@ Open `http://localhost:8501` in your browser.
 
 ---
 
-## API Reference
-
-### `GET /health`
-
-```json
-{"status": "healthy"}
-```
-
-### `POST /recommend`
-
-**Request:**
-
-```json
-{
-  "query": "We need a Java developer who collaborates well.",
-  "num_results": 10
-}
-```
-
-**Response:**
-
-```json
-{
-  "recommended_assessments": [
-    {
-      "url": "https://www.shl.com/solutions/products/product-catalog/view/java-8/",
-      "name": "Java 8",
-      "adaptive_support": "No",
-      "description": "...",
-      "duration": 25,
-      "remote_support": "Yes",
-      "test_type": ["Knowledge & Skills"]
-    }
-  ]
-}
-```
-
----
-
-## Evaluation
-
-### Run against the labelled training set
-
-```bash
-python scripts/evaluate.py --k 5 10
-```
-
-This computes **Mean Recall@5**, **Mean Recall@10**, and **MAP** against the 10 labelled training queries.
-
-### Generate test-set predictions CSV
-
-```bash
-python scripts/generate_predictions.py
-```
-
-Output: `data/datasets/predictions.csv`
-
-Format:
-```
-Query,Assessment_url
-<query1>,<url1>
-<query1>,<url2>
-...
-```
-
----
-
 ## Project Structure
 
 ```
@@ -252,29 +185,5 @@ A greedy swap algorithm ensures that no single test-type category exceeds 70 % o
 
 ---
 
-## Running Tests
 
-```bash
-pytest
-```
 
-Coverage report:
-
-```bash
-pytest --cov=. --cov-report=html
-```
-
----
-
-## Submission Checklist
-
-- [x] Scrapes SHL catalogue (≥ 377 Individual Test Solutions)
-- [x] `GET /health` → `{"status": "healthy"}`
-- [x] `POST /recommend` → JSON with name, url, adaptive_support, description, duration, remote_support, test_type
-- [x] Returns 5–10 recommendations
-- [x] Uses LLM + retrieval (RAG with Gemini + FAISS)
-- [x] Category balancing for multi-domain queries
-- [x] Evaluation with Mean Recall@K
-- [x] Predictions CSV in required format
-- [x] Streamlit frontend
-- [x] Modular, testable, production-ready code
